@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: ARMv8_ROOTFS
+name: ROOTFS
 
 on:
   repository_dispatch:
@@ -18,8 +18,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-#  schedule:
-#   - cron: '5 17 * * *'
+  schedule:
+   - cron: '20 20 * * *'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -34,8 +34,8 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
-  FILE_NAME: ARMv8_ROOTFS
-  PRODUCT_NAME: ARMv8_ROOTFS
+  FILE_NAME: ROOTFS
+  PRODUCT_NAME: ROOTFS
 
 jobs:
   build:
